@@ -1,5 +1,4 @@
-# Beyond Basic Chatbots: <br>
-Enhancing Website Search with LLMs
+# Beyond Basic Chatbots: Enhancing Website Search with LLMs
 
 This repository contains resources and code examples related to the presentation "Beyond Basic Chatbots: Enhancing Website Search with LLMs" by Mark Lee, presented at HighEdWeb 2024.
 
