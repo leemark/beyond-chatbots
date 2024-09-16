@@ -48,6 +48,7 @@ This presentation explores how Large Language Models (LLMs) can be used to enhan
 ## Advanced Prompting Techniques
 
 - Chain-of-thought prompting
+
   Example: "Let's approach this step-by-step:
   1. First, we'll analyze the problem.
   2. Then, we'll break it down into smaller parts.
@@ -56,6 +57,7 @@ This presentation explores how Large Language Models (LLMs) can be used to enhan
   Now, let's begin with step 1..."
 
 - Few-shot and many-shot learning
+
   Example: "Here are three examples of how to write a haiku:
   1. 'An old silent pond... / A frog jumps into the pond, / splash! Silence again.'
   2. 'The first cold shower / Even the monkey seems to want / A little coat of straw'
@@ -63,11 +65,12 @@ This presentation explores how Large Language Models (LLMs) can be used to enhan
   Now, using this pattern, write a haiku about summer."
 
 - Pre-fill/partial response technique
-  Example: "Complete this sentence in a creative way:
-  The old man looked out the window and saw..."
+
+  Example: "The cat looked out the window and saw a"
 
 - Scratchpad technique
-  Example: "Let's solve this math problem step by step. We'll use <scratchpad></scratchpad> XML tags like this to show our work:
+
+  Example: "Solve this math problem step by step. Make sure to use <scratchpad></scratchpad> XML tags like this to show your work. Here is an example:
   Problem: What is 15% of 80?
   <scratchpad>
   1. Convert 15% to a decimal: 15% = 0.15
@@ -76,11 +79,14 @@ This presentation explores how Large Language Models (LLMs) can be used to enhan
   Therefore, 15% of 80 is 12."
 
 - Using reflection, for self-improvement
+
   Example: "After coming up with your answer, ask yourself:
   1. Is this response clear and concise?
   2. Have I addressed all aspects of the question?
   3. Are there any potential misunderstandings in my explanation?
-  4. How could I improve this answer for better clarity or accuracy?"
+  4. How could I improve this answer for better clarity or accuracy?
+  Then, revise your answer based on these questions.
+  "
 
 ## RAG (Retrieval-Augmented Generation)
 
