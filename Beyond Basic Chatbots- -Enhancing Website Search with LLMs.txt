@@ -1,377 +1,0 @@
-Beyond Basic Chatbots: Enhancing Website Search with LLMs
-Mark Lee
-
-Director of Web User Experience & Digital Strategy
-Colorado College
-
-github.com/leemark/beyond-chatbots
-Turn on live captions. Add a QR code to this slide and to the end. 
-Welcome everyone to my presentation on enhancing website search using Large Language Models. I'm Mark Lee, the Director of Web User Experience & Digital Strategy at Colorado College.
-1
-
-About me
-20+ years in web development
-Full stack to front-end and UX
-Tech optimist
-I've been working on the web for over two decades. I started as a full stack developer and have since moved more towards front-end development and user experience. Despite the challenges we face with technology, after all this time I'm still a firm believer in its power to improve people's lives.
-2
-
-Where we’re going, we don’t need roads!
-(but it’s nice to have a roadmap anyway)
-Challenges with web search
-LLM chatbots and their limitations
-Basic to advanced prompting
-Advanced LLM usage
-A RAG use case
-So, I want to give you an overview of what we are going to cover…
-Challenges with search and information discovery
-We're going to talk about large language models and LLM based chatbots, and some of their limitations
-We'll cover basic prompting, then get into some advanced techniques that can make LLMs much more useful
-We'll look at some LLM tooling like developer playgrounds and APIs
-We're going to cover some advanced techniques that help LLMs provide much better answers
-Then coming back to search, we will look at the specific use case of retrieval augmented generation, to combine the power of traditional search with the user experience of LLMs, for a "best of both worlds" sort of approach.
-
-This is not going to be a deep dive into programming with LLMs, though I will show some example code towards the end and provide a github repo with some developer-centric resources and code. I want to keep this focused more on the concepts of what you CAN do, rather than on a specific code implementation.
-
-The Challenge: Information Discovery 
- TOO MUCH information on college websites
- Deep, layered navigation
- Fragmented information
-College websites face a significant user experience challenge. Too much information! At Colorado College, our website contains between 15,000 to 20,000 pages. Relevant information can be buried deep under layers of navigation, and sometimes information on a single topic is scattered across the site, on multiple pages reflecting our organizational structure rather than focusing on what the user needs.
-4
-
-Current Search Tools
-QuickSearch: Simple keyword search
-
-
-Google Custom Search:Algorithmic; 10 blue links
-Currently, on our college website we offer two different search tools. First, there's QuickSearch, a fairly basic keyword search through a curated list of 300-400 important pages. We also have a Google Custom Search, which offers smarter algorithmic searching but still results in a list of pages that may or may not meet the user's needs - the classic "ten blue links" situation, rather than telling the user what they want to know, we say, here are some links to places you might want to check.
-5
-
-Large Language Models (LLMs)
- AI that understands and generates human-like text
- Trained on massive datasets
- Uses deep learning and neural networks. Generative pre-trained transformers.
-
-What Can LLMs Do Well?
- Translation
- Summarization
- Pattern recognition 
- Question-answering
-
-Let's talk about Large Language Models, or LLMs. These are AI programs that can understand and generate human-like text. They're trained on massive datasets, often containing billions of words, and use deep learning and neural networks, specifically a transformer architecture. Some things that LLMs can do include Translation, Summarization, Pattern Recognition, and Question answering. They are also pretty darn good as coding assistants, in my experience. You still have to know what you are doing, but they can make coding and debugging a lot faster.
-6
-
-Some Advantages of LLM Chatbots
- Natural language queries
- Diverse language tasks
-
- Human-like responses
- Continuous improvement
-LLM-based chatbots have several advantages that could be helpful for website search. They can respond to unpredictable, natural language queries, perform various language tasks, generate human-like text, and continuously improve through fine-tuning and prompt engineering. This enables more intuitive human-computer interaction.
-7
-
-Some Limitations of LLM Chatbots
- Potential for "hallucinations"
-
- Bias in training data
- Security and privacy concerns
- Limited to training data cutoff
- Limited Context window (sometimes)
-
-However, LLMs also have limitations that make them kinda bad as a source for correct information. They can "hallucinate" or generate false information, are susceptible to biases in their training data, and may pose security and privacy risks. Importantly, they're limited to information up to their training cutoff date, making them much less useful for current up to date information.
-8
-
-LLMs in Action
-Let's look at some examples of how LLMs respond to queries compared to traditional search.  This is chatgpt, and I asked “how much is tuition at Colorado College?” Helpfully it gave me 2 options, unhelpfully, neither one of them was correct… 
-9
-
-Ok, how about if I use traditional search? Hmm, I get 5 different pages I can look at, wonder which one I want? 
-
-
-perplexity.ai
-How about a mixture of both? This is perplexity.ai, a new type of ai-driven web search. Answers questions like an LLM, but the information is pulled from the web, with citations and suggested follow-up questions. You can see that citations are given for each fact, and yes, this one does give me the correct answer to my question. This is more like what our users need… more on this later.
-
-Basic prompting
-The art of crafting input text that elicits a specific response or behavior from the model. The prompt serves as a starting point that guides the model's response. 
-
-First, let’s talk about prompting… Basic prompting is how we guide AI to give us the answers we need. It's like giving directions to a smart but literal assistant. Three key elements make a good prompt:
-Clarity: Use simple, clear language.
-Specificity: Define exactly what you want.
-Context: Provide relevant background.
-For example, instead of 'Tell me about admissions,' try 'Explain the typical steps in the college admissions process for a high school senior.'
-Effective prompting is crucial and improves with practice. Mastering this skill is key to leveraging AI effectively for better search experiences.
-12
-
-Further Improving LLM Performance
-Better prompting techniques
-"Think out loud" approach, let the LLM think
-Leverage speed and context windows
-Use the right tool for the job  
-Let’s start to think about how we can build a framework around the LLM 
-We can enhance LLM performance through several techniques. These include better prompting, letting the model "think out loud" using a scratchpad, choosing the right model for the task, and leveraging the increasing speed of LLMs for techniques like reflection and question rephrasing. We can also use increasingly long context windows for multi-shot, in-context learning. The “context window” is basically how much input (in tokens) the LLM can accept. A token is a word chunk. 
-13
-
-Let’s look under the hood a bit more…
-Chat interface vs developer playground
-OpenAI, Anthropic, Google AI Studio, others
-Prompt library of various examples 
-Choose different models
-Set Temperature
-Set your own System Prompt
-Test, iterate, then get the API code
-With a basic chat interface, we ask a question, and get an answer, and ask another question, and get another answer, with no real knobs to turn or variables to fiddle with. If we want to go beyond what a basic chat interface offers us, we’ll need to use tools that expose a lot of the behind the scenes options, and ultimately start communicating more directly with the LLM via API calls.
-
-We’ll use an advanced interface called a “developer playground” These interfaces allow you to tweak many parameters and customize the LLM to a degree. They are offered by openai, anthropic, google, and others.
-14
-
-This is Google AI Studio. You can see it gives you the ability to set a system prompt, change models, set the temperature, get customized api code and more. We’ll go into more detail on those options next… .
-
-Choosing a model
-Open vs closed
-Cost vs intelligence
-Cost and speed
-Intelligence vs speed
-
-Choosing the right Language Model involves balancing several factors:
-
-Open vs. Closed: Open models offer transparency and customization, while closed models often provide more polished results. It’s interesting to note that there are a number of smaller open source models that you can even download and run on your own local computer. If you are interested in this I would look at ollama to get started. Tiny LLMs may be built into the browser soon.
-Cost vs. Intelligence: More powerful and sophisticated models generally cost more. For example, OpenAI’s latest most intelligent model is $60 per million output tokens, whereas Google’s Gemini Flash, a smaller model is 30 cents per million output tokens.
-Cost and Speed: Faster models are often smaller so may have lower operational costs. But you may be sacrificing intelligence.
-Intelligence vs. Speed: The most capable models are often slower. Think about whether you prioritize complex reasoning or rapid responses.
-
-It’s like the classic saying Fast, cheap, good, pick any two. But you can’t have all 3.
-
-
-16
-
-Temperature, etc.
-Temperature: Controls randomness
-Top P: Limits token selection
-
-
-
-
-
-
-
-
-
-Higher values = more creative, varied responses
-Lower values = more focused, deterministic outputs
-When working with LLMs, two key parameters help fine-tune responses: Temperature and Top P.
-Temperature controls randomness. Think of it as the AI's 'creativity knob'.Top-p: Controls the probability range of words considered. For example p = 0.7 means the LLM will choose from the top 70% of tokens by probability.
-
-Low temperature (near 0): More focused, predictable responses
-High temperature (near 1): More diverse, creative outputs
-
-17
-
-System prompt vs. user prompt
-“You are a helpful assistant…”
-
-
-System Prompt: This is like giving the AI its job description and personality profile. It sets the context and defines how the AI should behave overall. 
-For example: 'You are a helpful assistant for our college website, knowledgeable about admissions, campus life, and academic programs.'
-User Prompt: This is the specific question or task given to the AI within that context. When you use a chatbot like chatGPT, the system prompt is “baked in” behind the scenes where you don’t see it, and it tells the chatbot how to behave. The user prompt will be whatever you ask the chatbot.
-18
-
-Advanced Prompting Techniques
- Chain-of-thought prompting
- Few-shot or many-shot (in-context) learning
- Pre-fill/partial response
- <scratchpad>
- Reflection
-Let's dive deeper into advanced prompting techniques. We’ll talk about  Chain-of-thought promptingFew-shot or many-shot (in-context) learningPre-fill response <scratchpad> Reflection
-19
-
-Chain-of-Thought Prompting
-Encourages step-by-step reasoning
-Improves accuracy for complex tasks
-Example: "Think through this problem step-by-step..."
-
-Chain-of-thought prompting encourages the AI to break down complex problems into smaller steps. By asking the AI to 'think aloud', we often get more accurate and explainable results. This is particularly useful for complex queries on college websites, like explaining degree requirements for example. Commonly phrased as “Think this through step by step…” A caution about chain of thought, there are some new models, like the new ‘o1’ model that openAI released in the last 2 weeks, that have chain of thought “baked in” to them, so if you are using such a model it is recommended not to use chain of thought in the prompt also. 
- 
-20
-
-Just a side note, Google AI studio just released a compare feature so you can put 2 models side by side with different system prompts and compare the output
-
-Prompting Techniques: From Zero to Many
-Zero-shot = No examples providedClassify the sentiment of the following sentence:'The product exceeded my expectations.'
-Few-shot = 1-5 examplesClassify the sentiment of the following sentences as positive, neutral, or negative:1. 'The customer service was terrible.' -> Negative2. 'The meal was okay, nothing special.' -> Neutral
-3. 'The product exceeded my expectations.' -> 
-Many-shot = 10+ examples
-
-Let's explore three prompting techniques where we provide some example answers to the LLM. So imagine you are teaching a friend a new card game. You wouldn’t just read them the rules of the game, you would also walk them through playing a few hands, to help them get the hang of it.
-
-Zero-shot: We give the AI a task it's never seen, with no examples. It's quick & simple but can lead to unexpected results.
-Few-shot: We provide 1-5 examples. This gently guides the AI, improving accuracy for many tasks.
-Many-shot: We use 10 or more examples. This is powerful for complex tasks but takes more time to set up.
-
-Each technique has its place. Zero-shot is great for creative tasks, few-shot balances guidance and efficiency, while many-shot excels in specialized applications.
-As we refine our website search, we'll likely use a mix of these techniques depending on the specific task at hand.
-
-22
-
-Pre-filled Response Technique
-Start the response for the AI
-Guides the structure and content
-Example: The three main dining locations on campus are:(1) 
-
-
-
-The pre-filling technique involves starting the response and letting the AI complete it. This gives you more control over the structure and content of the answer. It's particularly useful for ensuring consistency in how information is presented, for example if you wanted the answer to be a numbered list of items.
-
-23
-
-Scratchpad Technique
-Ask the AI to show its work, for example in <scratchpad> XML tags, before composing its answer. Improves transparency and accuracy.
-
-
-
-The scratchpad technique involves asking the AI to show its work within <scratchpad> tags before giving a final answer. This improves transparency and often leads to more accurate results. It's like asking a student to show their work in a math problem. This can be valuable for complex queries where you want to verify the AI's reasoning process.
-24
-
-Reflection: Self-Improvement for AI
-The LLM reviews & improves its own responseExample: "Review your answer. Can it be improved?Do you see any mistakes?"
-The reflection technique encourages the AI to review and improve its own responses. By asking the AI to reflect on its answer, we often get more refined and accurate information. Think about proofreading an important email before you hit send, to catch any typos or that missing  atachment. You can test this out just with a regular chatbot, like chatgpt. Ask it a question, then ask it how it would improve its response, or if it made any mistakes, and it’ll often come out with a better second try. You can try this multiple times and it may refine and improve the response each time.
-
-25
-
-A proposed methodology for better Web search 
-R.A.G.
-Retrieval-Augmented Generation
-Now, let's look at a practical application: a RAG-based answer engine. RAG stands for Retrieval-Augmented Generation.
-
-Why Use RAG?
- Contextual, natural language answers
- References and citations
- Follow-up questions for deepened engagement
- Combines LLM capabilities with up-to-date info
-The RAG approach offers several benefits over traditional search. It can provide contextual, natural language answers instead of just a list of  links to click on. It can offer references and citations, suggest follow-up questions, and most importantly, it combines the power of LLMs with up-to-date information directly from your website.
-27
-
-So I decided to build my own RAG-based, LLM-enhanced search tool, similar to the perplexity.ai example I showed earlier. Note that this is NOT a chatbot, in that it does not have an ongoing back and forth conversation with the user, but rather is an enhanced search tool that answers users questions based on information pulled from the CC website.
-
-A RAG pipeline
-OpenAI CookBook https://cookbook.openai.com/examples/evaluation/evaluate_rag_with_llamaindex
-Here’s a diagram of what a RAG system looks like. The user starts it off with a question, but instead of the query going straight to the LLM, it is sent to an index containing up to date factual, hopefully vetted information. This information could come from a database, from a document, or from the Web. Once the current up to data factual information is retrieved from the index, that info PLUS the users original question is sent to the LLM to write the response. So back to my earlier tuition example, the question would go to the index, where the ACTUAL tuition would be picked up, then that number would be provided to the LLM to answer my question correctly.  
-
-Use an LLM to evaluate & rewrite the user query (1 or n variations)
-Search information sources (search API: Google, Brave, DDG)
-Grab and parse the contents of resultant pages
-Store results in vector database (optionally*, for semantic search)
-Retrieve relevant info (optional, for semantic search)
-Pass original user query plus relevant context to LLM to generate the answer (don’t forget to use our advanced prompting techniques)
-Use LLM to suggest follow-up questions
-Send all to user: generated answer, citations, and follow-up questions
-Here's more about how Retrieval-Augmented Generation works:
-
-An AI rewrites the user's query for optimal searching.
-We search our information sources, like the college website or databases.
-Results are stored in a vector database, which allows for semantic search.
-The most relevant information is retrieved.
-Another call to the AI generates a human-like answer using this information.
-Finally, we suggest follow-up questions to encourage further exploration.
-
-RAG ensures that responses are both contextually appropriate and factually current. For a college website, this means providing accurate, up-to-date information about admissions, courses, or campus events, while maintaining a conversational, helpful user experience
-
-30
-
-Embedding Models & Vector Databases
-Embed content into high-dimensional space
-Semantic similarity search
-Efficient retrieval of relevant information
-If we want to compare two sentences — we don’t want just to compare the words they contain but rather whether or not they mean the same thing. Vector databases are a key component of the RAG architecture. They allow us to embed content into a high-dimensional space, enabling semantic similarity search. For example suppose we have a sentence “I need to take this check to the bank” and another sentence “the river is overflowing its banks”. While those both use the word bank they are really talking about completely different things, so first the first sentence we would want to see search results related to financial services and not related to rivers and streams. 
-
-This means we can efficiently retrieve information that's conceptually related to the query, not just keyword matches.
-31
-
-How to build
-a rudimentary 
-RAG-based search in Python
-Here is some example code showing how to build a rudimentary RAG-based search in Python
-
-# Step 1: Rephrase the user's query
-# Step 2: Search for relevant URLs
-# Step 3: Scrape and parse content from the URLs
-# Step 4: Embed the scraped content into the Chroma database
-# Step 5: Query the Chroma database for relevant information
-# Step 6: Prepare the context for the response generation
-# Step 7: Generate the final response
-# Step 8: Print the results
-
-
-Send a query to an LLM API
-Rephrase the user’s question to optimize it 
-
-# Step 0: This function just takes a message, passes it to an LLM via an API, and then returns the answer.
-# Step 1: Rephrase the user's query into a search-friendly format
-
-
-
-Use a search API to search on your website
-For the search results, grab and parse out all page contents
-# Step 2: Search for relevant URLs
-This example uses the Brave API which offers a limited use free API, also there is duckduckgo, or if you have a google custom search on your site like we do, that offers a free REST API and that’s what I used in my app.
-# Step 3: Scrape and parse content from the URLs
-
-
-Embed the web content
-into the vector DB
-Query the vector DB
-for relevant facts from the web content
-# Step 4: Embed the scraped content into the Chroma database
-There are a number of available vector DBs, Chroma is a simple to use open source option.
-
-# Step 5: Query the Chroma database for relevant information
-
-
-
-Generate the final response
-Print the Results
-# Step 7: Generate the final response
-# Step 8: Print the results
-
-All this is less than 150 lines of code. It does not quite get you to perplexity AI, but it does give you all the basic building blocks and core functionality.
-
-I didn’t show generating follow-up questions but that would be just another query to the LLM api.
-
-
-So you put all of that together, with a little tweaking and some user interface code and you have an LLM enhanced website search. 
-
-Thoughts after building this.
-The first 80% is easy, but the last 20% holds the value.
-
-Beyond search, it unlocks new, more efficient methods for content QA. 
-
-
-😱
-It’s useful
-
-The Future (present?) of AI-Powered Search
- Multimodal search (text, image, audio)
- Personalization
- Conversational search
- Integration with other campus systems
- Autonomous Agents
-Looking to the future, we can expect AI-powered search to become even more advanced. We are already seeing multimodal search combining text, image, and audio. Personalization will become more sophisticated. Search interfaces may become more conversational, and we could see deeper integration with other campus systems for a more holistic information discovery experience.
-39
-
-In SummaryEnhancing User Experience with LLMs
-LLMs offer powerful information search capabilities
-But they need “fact checking” and current info
-RAG combines LLM power with up-to-date info
-Potential to significantly improve information discovery
-In conclusion, LLMs offer powerful capabilities for enhancing website search. By implementing a RAG-based system, we can combine the strengths of LLMs with up-to-date information from our websites. This has the potential to significantly improve information discovery and overall user experience on college websites. It can also help you, as a staff member, discover things about your website you might not know.
-40
-
-Thank You!
-
-Questions?
-
-
-Resources, code examples, slides, etc. 
-github.com/leemark/beyond-chatbots
-Thank you for being here! I'm now open to any questions you might have about implementing LLMs or RAG for website search. You can find additional resources code examples, and more at the link provided. Also feel free to reach out if you have any further questions after the session.
-41
