@@ -116,42 +116,42 @@ This section includes example Python code snippets demonstrating how to build a 
 1. Rephrasing user queries
     This snippet shows the prompt used to rephrase the user's question into a good search query.
 
-        ```
-        {"role": "system", "content": "You are a search assistant. Rephrase the following as a concise search query expertly crafted to retrieve relevant results from a search engine. Return only the query, no explanation:"},
-        {"role": "user", "content": user_query_goes_here}
-        ```
-        
+    ```
+    {"role": "system", "content": "You are a search assistant. Rephrase the following as a concise search query expertly crafted to retrieve relevant results from a search engine. Return only the query, no explanation:"},
+    {"role": "user", "content": user_query_goes_here}
+    ```
+
 2. Searching for relevant URLs
     The following code uses the Brave Search API to find relevant URLs based on the query.
 
-        ```
-        url = f"https://api.search.brave.com/res/v1/web/search?q={query}"
-        headers = {"X-Subscription-Token": BRAVE_API_KEY}
-        response = requests.get(url, headers=headers)
-        results = response.json()
-        ```
+    ```
+    url = f"https://api.search.brave.com/res/v1/web/search?q={query}"
+    headers = {"X-Subscription-Token": BRAVE_API_KEY}
+    response = requests.get(url, headers=headers)
+    results = response.json()
+    ```
 3. Scraping and parsing content
     This snippet shows the code used to scrape and parse the content from the URLs.
         
-        ```
-        response = requests.get(url, headers=headers)
-        soup = BeautifulSoup(response.content, 'html.parser')
-        contents.append(soup.get_text())
-        sources.append(url)
-        ```
+    ```
+    response = requests.get(url, headers=headers)
+    soup = BeautifulSoup(response.content, 'html.parser')
+    contents.append(soup.get_text())
+    sources.append(url)
+    ```
 4. Embedding content into a vector database
     The following code embeds the content into a vector database.
-        ```
-        client = chromadb.PersistentClient()
-        collection = client.get_or_create_collection(collection_name)
+    ```
+    client = chromadb.PersistentClient()
+    collection = client.get_or_create_collection(collection_name)
 
-        for content, source in zip(contents, sources):
-            collection.add(
-                documents=[content],
-                metadatas=[{"source": source}],
-                ids=[str(uuid.uuid4())]
-            )
-        ```
+    for content, source in zip(contents, sources):
+        collection.add(
+            documents=[content],
+            metadatas=[{"source": source}],
+            ids=[str(uuid.uuid4())]
+        )
+    ```
 5. Querying the database for relevant information
     The following code queries the database for relevant information.
     ```
