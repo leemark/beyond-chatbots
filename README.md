@@ -116,7 +116,7 @@ This presentation explores how Large Language Models (LLMs) can be used to enhan
 - Embedding models and vector databases
   - Embedding models: Convert text into numerical vectors that capture semantic meaning
   - Vector databases: Efficiently store and search these embeddings
-  - Popular options: [OpenAI's text-embedding-3-small](https://platform.openai.com/docs/guides/embeddings) [Sentence Transformers](https://huggingface.co/sentence-transformers)
+  - Popular options: [OpenAI's text-embedding-3-small](https://platform.openai.com/docs/guides/embeddings), [Sentence Transformers](https://huggingface.co/sentence-transformers)
   - Vector DB examples: [Pinecone](https://www.pinecone.io/), [Weaviate](https://weaviate.io/), or [Chroma](https://docs.trychroma.com/) for storing and querying vectors
 
 
