@@ -185,15 +185,20 @@ This section includes example Python code snippets demonstrating how to build a 
 
 ## Resources
 
-### Demo and Tools
-- [Ask Colorado College - Live demo](https://ai-enhanced-search.streamlit.app/) - Demo RAG-based search app (hosted on streamlit, may have usage limits)
+### Working Demo
+- [Ask Colorado College - Live Demo](https://ai-enhanced-search.streamlit.app/) - Demo RAG-based search app (hosted onstreamlit, may have usage limits)
 - [Ask Colorado College -Code Repository](https://github.com/leemark/ai-enhanced-search) - Code repository for the demo
+
+### Tools/LLMs
 - [OpenAI Cookbook](https://cookbook.openai.com/examples/evaluation/evaluate_rag_with_llamaindex)
 - [Google AI Studio](https://aistudio.google.com/)
 - [Anthropic Claude](https://www.anthropic.com/)
 - [Perplexity AI](https://www.perplexity.ai/)
+- [ollama - run local  LLMs on your own machine](https://ollama.com/)
+- [Google NotebookLM](https://notebooklm.google.com/)
 
 ### Prompting Guides and Tutorials
+
 - [Working with AI: Two Paths to Prompting](https://www.oneusefulthing.org/p/working-with-ai-two-paths-to-prompting)
 - [How to Write Effective ChatGPT Prompts](https://www.trustinsights.ai/wp-content/uploads/2023/04/instant-insights-how-to-write-effective-chat-gpt-prompt.pdf)
 - [4 Generative AI Power Questions](https://www.trustinsights.ai/wp-content/uploads/2024/04/instant_insights_4_generative_ai_power_questions.pdf)
