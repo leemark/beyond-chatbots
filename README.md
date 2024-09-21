@@ -16,7 +16,9 @@ This repository contains resources and code examples related to the presentation
 ## Introduction
 
 This presentation explores how Large Language Models (LLMs) can be used to enhance website search functionality, particularly for college websites. It covers the challenges of traditional search methods and introduces advanced techniques for leveraging LLMs to improve information discovery.
-[Beyond Basic Chatbots: Enhancing Website Search with LLMs (PDF)](https://raw.githubusercontent.com/leemark/beyond-chatbots/refs/heads/main/Beyond%20Basic%20Chatbots-%20-Enhancing%20Website%20Search%20with%20LLMs.pdf)
+
+[Download the PDF here](https://raw.githubusercontent.com/leemark/beyond-chatbots/refs/heads/main/Beyond%20Basic%20Chatbots-%20-Enhancing%20Website%20Search%20with%20LLMs.pdf)
+
 
 
 ## Key Concepts
@@ -184,8 +186,8 @@ This section includes example Python code snippets demonstrating how to build a 
 ## Resources
 
 ### Demo and Tools
-- [Ask Colorado College](https://ai-enhanced-search.streamlit.app/) - Demo RAG-based search app
-- [Code Repository](https://github.com/leemark/ai-enhanced-search) - Code repository for the demo
+- [Ask Colorado College - Live demo](https://ai-enhanced-search.streamlit.app/) - Demo RAG-based search app (hosted on streamlit, may have usage limits)
+- [Ask Colorado College -Code Repository](https://github.com/leemark/ai-enhanced-search) - Code repository for the demo
 - [OpenAI Cookbook](https://cookbook.openai.com/examples/evaluation/evaluate_rag_with_llamaindex)
 - [Google AI Studio](https://aistudio.google.com/)
 - [Anthropic Claude](https://www.anthropic.com/)
