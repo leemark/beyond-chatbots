@@ -16,7 +16,7 @@ This repository contains resources and code examples related to the presentation
 ## Introduction
 
 This presentation explores how Large Language Models (LLMs) can be used to enhance website search functionality, particularly for college websites. It covers the challenges of traditional search methods and introduces advanced techniques for leveraging LLMs to improve information discovery.
-[Beyond Basic Chatbots: Enhancing Website Search with LLMs (PDF)](Beyond Basic Chatbots - Enhancing Website Search with LLMs.pdf)
+[Beyond Basic Chatbots: Enhancing Website Search with LLMs (PDF)](https://raw.githubusercontent.com/leemark/beyond-chatbots/refs/heads/main/Beyond%20Basic%20Chatbots-%20-Enhancing%20Website%20Search%20with%20LLMs.pdf)
 
 
 ## Key Concepts
