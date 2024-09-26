@@ -212,6 +212,7 @@ This section includes example Python code snippets demonstrating how to build a 
 - [RAG From Scratch: Part 1 (Overview)](https://www.youtube.com/watch?v=TRjq7t2Ms5I)
 - [Build an AI-powered search engine with Langchain](https://www.youtube.com/watch?v=43ZCeBTcsS8)
 - [Build a RAG AI Assistant with LangChain, OpenAI, and Pinecone](https://www.youtube.com/watch?v=wd7TZ4w1mSw&list=PLfaIDFEXuae2LXbO1_PKyVJiQ23ZztA0x)
+- [Better RAG retrieval from PDFs using Vision/Multimodal LLMs](https://x.com/helloiamleonie/status/1839321865195851859)
 
 ### AI in Higher Education
 - [AI For U Podcast](https://www.enrollify.org/podcasts/ai-for-u) - A podcast series exploring practical AI applications in higher education marketing, enrollment, and alumni relations
