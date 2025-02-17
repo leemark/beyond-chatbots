@@ -206,7 +206,6 @@ This section includes example Python code snippets demonstrating how to build a 
 - [Coursera: Prompt Engineering for ChatGPT](https://www.coursera.org/learn/prompt-engineering/home/)
 - [OpenAI Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering)
 - [Anthropic Claude Prompt Library](https://docs.anthropic.com/claude/prompt-library)
-- [RAG Evaluation](https://docs.confident-ai.com/guides/guides-rag-evaluation)
 
 ### RAG and Answer Engine Tutorials
 - [Build a Perplexity-Inspired Answer Engine Using Groq, Mixtral, Langchain, Brave & OpenAI in 10 Min](https://medium.com/@nbertagnolli/build-a-perplexity-inspired-answer-engine-using-groq-mixtral-langchain-brave-openai-in-10-min-642de8c95666)
@@ -214,6 +213,7 @@ This section includes example Python code snippets demonstrating how to build a 
 - [Build an AI-powered search engine with Langchain](https://www.youtube.com/watch?v=43ZCeBTcsS8)
 - [Build a RAG AI Assistant with LangChain, OpenAI, and Pinecone](https://www.youtube.com/watch?v=wd7TZ4w1mSw&list=PLfaIDFEXuae2LXbO1_PKyVJiQ23ZztA0x)
 - [Better RAG retrieval from PDFs using Vision/Multimodal LLMs](https://x.com/helloiamleonie/status/1839321865195851859)
+- [RAG Evaluation](https://docs.confident-ai.com/guides/guides-rag-evaluation)
 
 ### AI in Higher Education
 - [AI For U Podcast](https://www.enrollify.org/podcasts/ai-for-u) - A podcast series exploring practical AI applications in higher education marketing, enrollment, and alumni relations
