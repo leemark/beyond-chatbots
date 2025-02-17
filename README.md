@@ -206,6 +206,7 @@ This section includes example Python code snippets demonstrating how to build a 
 - [Coursera: Prompt Engineering for ChatGPT](https://www.coursera.org/learn/prompt-engineering/home/)
 - [OpenAI Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering)
 - [Anthropic Claude Prompt Library](https://docs.anthropic.com/claude/prompt-library)
+- [RAG Evaluation](https://docs.confident-ai.com/guides/guides-rag-evaluation)
 
 ### RAG and Answer Engine Tutorials
 - [Build a Perplexity-Inspired Answer Engine Using Groq, Mixtral, Langchain, Brave & OpenAI in 10 Min](https://medium.com/@nbertagnolli/build-a-perplexity-inspired-answer-engine-using-groq-mixtral-langchain-brave-openai-in-10-min-642de8c95666)
