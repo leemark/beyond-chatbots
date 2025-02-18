@@ -1,6 +1,6 @@
 # Beyond Basic Chatbots: Enhancing Website Search with LLMs
 
-This repository contains resources and code examples related to the presentation "Beyond Basic Chatbots: Enhancing Website Search with LLMs" by Mark Lee, presented at HighEdWeb 2024 [Slides PDF](https://raw.githubusercontent.com/leemark/beyond-chatbots/refs/heads/main/Beyond%20Basic%20Chatbots-%20-Enhancing%20Website%20Search%20with%20LLMs.pdf) and the presentation "Enhancing Website Search with AI" presented at the Cascade Users Conference 2025 (Slides PDF coming soon).
+This repository contains resources and code examples related to the presentation "Beyond Basic Chatbots: Enhancing Website Search with LLMs" by Mark Lee, presented at HighEdWeb 2024 [Slides PDF](https://raw.githubusercontent.com/leemark/beyond-chatbots/refs/heads/main/Beyond%20Basic%20Chatbots-%20-Enhancing%20Website%20Search%20with%20LLMs.pdf) and the presentation "Enhancing Website Search with AI" presented at the Cascade Users Conference 2025 [Slides PDF](https://raw.githubusercontent.com/leemark/beyond-chatbots/refs/heads/main/Enhancing%20Website%20Search%20with%20AI.pdf).
 
 ## Table of Contents
 
